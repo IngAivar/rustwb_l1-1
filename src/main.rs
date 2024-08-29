@@ -3,7 +3,7 @@ pub trait Action {
     fn person_name(&self) -> String;
 
     fn say(&self) -> String {
-        format!("Hello, {}", self.person_name())
+        println!("Hello, {}", self.person_name())
     }
 }
 
@@ -12,7 +12,7 @@ pub struct Person {
     person_name: String,
 }
 
-// Трайт Action для структуры Person передающий имя методу say
+// Трейт Action для структуры Person передающий имя методу say
 impl Action for Person {
     fn person_name(&self) -> String {
         format!("{}", self.person_name)
